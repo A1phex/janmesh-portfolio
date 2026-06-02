@@ -51,8 +51,8 @@ nav ul a:hover{color:var(--tx)}
 
 /* ── SHARED SECTION SCAFFOLDING ── */
 section{scroll-margin-top:var(--nh)}
-.sf{padding:calc(var(--nh) + 80px) clamp(20px,7vw,108px) 88px;min-height:100vh;display:flex;flex-direction:column;justify-content:center}
-.sa{padding:88px clamp(20px,7vw,108px)}
+.sf{padding:calc(var(--nh) + 40px) clamp(20px,7vw,108px) 52px;min-height:100vh;display:flex;flex-direction:column;justify-content:center}
+.sa{padding:52px clamp(20px,7vw,108px)}
 .ey{display:flex;align-items:center;gap:14px;font-family:'Space Grotesk',sans-serif;font-size:.68rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--am);margin-bottom:14px}
 .ey::before{content:'';flex-shrink:0;width:32px;height:1px;background:var(--am)}
 .h2{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.9rem,3.2vw,2.8rem);font-weight:700;letter-spacing:-.022em;line-height:1.1;margin-bottom:48px}
@@ -73,7 +73,7 @@ section{scroll-margin-top:var(--nh)}
 .phl{font-family:monospace;font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:var(--tx3)}
 .scr{position:absolute;bottom:32px;left:clamp(20px,7vw,108px);display:flex;align-items:center;gap:10px;font-family:'Space Grotesk',sans-serif;font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--tx3)}
 .scrl{width:1px;height:36px;background:linear-gradient(to bottom,transparent,var(--tx3))}
-@media(max-width:840px){#hero{grid-template-columns:1fr}.hphoto{display:none}}
+@media(max-width:840px){#hero{grid-template-columns:1fr;justify-items:center}.hphoto{width:clamp(120px,40vw,180px);margin-bottom:24px;order:-1}}
 
 /* ── ABOUT ── */
 #about{background:var(--sf)}
