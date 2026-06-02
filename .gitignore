@@ -1,0 +1,13 @@
+# Sensitive personal documents — never commit these
+uploads/*redacted*
+uploads/Bewerbungsunterlagen*
+uploads/ZÜP*
+uploads/Aufenthaltstitel*
+uploads/Führerschein*
+
+# Design drafts
+design-canvas.jsx
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
