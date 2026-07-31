@@ -8,6 +8,9 @@ uploads/Führerschein*
 # Design drafts
 design-canvas.jsx
 
+# Before/after review screenshots — regenerate, don't commit
+.screenshots/
+
 # OS / editor noise
 .DS_Store
 Thumbs.db
