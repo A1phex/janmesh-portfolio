@@ -1,21 +1,23 @@
 <!DOCTYPE html>
-<html lang="en" data-lang="en">
+<html lang="de" data-lang="de">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RBV1JG1Y02"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-RBV1JG1Y02');
-</script>
-<!-- End Google tag -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Janmesh Thakare — Systems Engineer</title>
+<title>Janmesh Thakare — Systems Engineering, München</title>
+<meta name="description" content="Janmesh Thakare, M.Sc. Mechatronik in München. Systems Engineering bei der BMW AG, eigene Webanwendungen von der Anforderung bis zum Betrieb.">
+<link rel="canonical" href="https://a1phex.github.io/janmesh-portfolio/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230063d7'/%3E%3Ctext x='16' y='23' font-family='Helvetica,Arial,sans-serif' font-size='16' font-weight='bold' fill='white' text-anchor='middle'%3EJT%3C/text%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://a1phex.github.io/janmesh-portfolio/">
+<meta property="og:title" content="Janmesh Thakare — Systems Engineering, München">
+<meta property="og:description" content="Ich übersetze unklare Anforderungen in Systeme, die man bauen und prüfen kann.">
+<meta property="og:image" content="https://a1phex.github.io/janmesh-portfolio/uploads/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Barlow:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Barlow:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
 <style>
 /* ── RESET ── */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -39,8 +41,15 @@ html{scroll-behavior:smooth;overflow-x:hidden}
 body{font-family:'Barlow',system-ui,sans-serif;background:var(--bg);color:var(--tx);line-height:1.6;-webkit-font-smoothing:antialiased;text-wrap:pretty;overflow-x:hidden}
 a{color:inherit;text-decoration:none}
 
+/* Keyboard focus was previously invisible. Accent ring, no new colour. */
+:focus-visible{outline:2px solid var(--am);outline-offset:3px}
+.skip{position:absolute;left:-9999px;top:0;z-index:300;background:var(--am);color:var(--sf);font-family:'Space Grotesk',sans-serif;font-size:.82rem;font-weight:700;padding:13px 26px}
+.skip:focus{left:clamp(20px,7vw,108px)}
+
 /* ── BUTTONS ── */
-.bp{display:inline-flex;align-items:center;gap:8px;background:var(--am);color:#0f0f0f;font-family:'Space Grotesk',sans-serif;font-size:.82rem;font-weight:700;letter-spacing:.05em;padding:13px 26px;border:none;cursor:pointer;transition:background .2s,transform .15s}
+/* Label was #0f0f0f on --am = 3.44:1 and failed WCAG AA. --sf on --am = 5.58:1,
+   which is what the project pages already used. */
+.bp{display:inline-flex;align-items:center;gap:8px;background:var(--am);color:var(--sf);font-family:'Space Grotesk',sans-serif;font-size:.82rem;font-weight:700;letter-spacing:.05em;padding:13px 26px;border:none;cursor:pointer;transition:background .2s,transform .15s}
 .bp:hover{background:var(--am2);transform:translateY(-1px)}
 .bs{display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--tx2);font-family:'Space Grotesk',sans-serif;font-size:.82rem;font-weight:500;letter-spacing:.04em;padding:13px 26px;border:1px solid var(--bd);cursor:pointer;transition:border-color .2s,color .2s}
 .bs:hover{border-color:var(--tx2);color:var(--tx)}
@@ -55,81 +64,88 @@ nav ul a:hover{color:var(--tx)}
 .nr{display:flex;align-items:center;gap:12px;flex-shrink:0}
 .lsw{display:flex;background:var(--sf);border:1px solid var(--bd);border-radius:3px;overflow:hidden}
 .lb{font-family:'Space Grotesk',sans-serif;font-size:.68rem;font-weight:700;letter-spacing:.1em;padding:6px 13px;background:none;border:none;cursor:pointer;color:var(--tx3);transition:all .15s}
-.lb.on{background:var(--am);color:#0f0f0f}
+.lb.on{background:var(--am);color:var(--sf)}
 @media(max-width:600px){nav ul{display:none}}
 
 /* ── SHARED SECTION SCAFFOLDING ── */
 section{scroll-margin-top:var(--nh)}
-.sf{padding:calc(var(--nh) + 16px) clamp(20px,7vw,108px) 32px;display:flex;flex-direction:column;justify-content:center}
 .sa{padding:32px clamp(20px,7vw,108px)}
 .ey{display:flex;align-items:center;gap:14px;font-family:'Space Grotesk',sans-serif;font-size:.68rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--am);margin-bottom:14px}
 .ey::before{content:'';flex-shrink:0;width:32px;height:1px;background:var(--am)}
 .h2{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.9rem,3.2vw,2.8rem);font-weight:700;letter-spacing:-.022em;line-height:1.1;margin-bottom:48px}
+/* Lead paragraph sits between H2 and content, so H2 loses its 48px in that case. */
+.h2.tight{margin-bottom:22px}
+.lead{font-size:1.05rem;color:var(--tx2);line-height:1.84;max-width:580px;margin-bottom:48px}
 
 /* ── HERO ── */
 #hero{min-height:100vh;display:grid;grid-template-columns:1fr auto;align-items:center;gap:60px;padding:calc(var(--nh) + 24px) clamp(20px,7vw,108px) 24px;position:relative;overflow:hidden}
 .hgrid{position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(oklch(75% .015 242/.5) 1px,transparent 1px),linear-gradient(90deg,oklch(75% .015 242/.5) 1px,transparent 1px);background-size:56px 56px}
 .hgrid::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 72% 65% at 28% 50%,oklch(97% .006 242/0) 20%,var(--bg) 78%)}
-.hb{position:relative}
-.hh1{font-family:'Space Grotesk',sans-serif;font-size:clamp(3rem,5.8vw,5.6rem);font-weight:700;line-height:1.04;letter-spacing:-.025em;margin:22px 0 26px}
+/* z-index needed because .hphoto uses order:-1 at <=840px, which puts it behind
+   the .hgrid overlay's radial gradient and washes the photo out. */
+.hb{position:relative;z-index:1}
+/* Headline is a full sentence, so it uses the existing .cth display step
+   (clamp(2rem,4vw,3.5rem)) rather than the old two-word .hh1 step at 5.6rem. */
+.hh1{font-family:'Space Grotesk',sans-serif;font-size:clamp(2rem,4vw,3.5rem);font-weight:700;line-height:1.1;letter-spacing:-.022em;margin:0 0 26px;max-width:16ch}
 .hsub{font-size:clamp(1rem,1.4vw,1.12rem);font-weight:300;color:var(--tx2);max-width:560px;line-height:1.82;margin-bottom:44px}
-.hcta{display:flex;gap:12px;flex-wrap:wrap}
-.creds{display:flex;flex-wrap:wrap;gap:8px;margin-top:32px}
-.chip{font-family:'Space Grotesk',sans-serif;font-size:.68rem;font-weight:500;letter-spacing:.04em;color:var(--tx3);border:1px solid var(--bd);padding:4px 10px}
-.hphoto{width:clamp(150px,18vw,248px);aspect-ratio:3/4;background:var(--sf);border:1px solid var(--bd);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;position:relative;flex-shrink:0}
-.hphoto::after{content:'';position:absolute;inset:10px 10px -10px -10px;border:1px solid var(--am);opacity:.2;pointer-events:none;overflow:hidden}
-.phi{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.8rem,3vw,2.6rem);font-weight:700;color:var(--tx3)}
-.phl{font-family:monospace;font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:var(--tx3)}
-.scr{position:absolute;bottom:32px;left:clamp(20px,7vw,108px);display:flex;align-items:center;gap:10px;font-family:'Space Grotesk',sans-serif;font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--tx3)}
-.scrl{width:1px;height:36px;background:linear-gradient(to bottom,transparent,var(--tx3))}
-@media(max-width:840px){#hero{grid-template-columns:1fr;justify-items:center}.hphoto{width:clamp(120px,40vw,180px);margin-bottom:24px;order:-1}}
+.hphoto{width:clamp(150px,18vw,248px);aspect-ratio:3/4;background:var(--sf);border:1px solid var(--bd);position:relative;z-index:1;flex-shrink:0}
+.hphoto::after{content:'';position:absolute;inset:10px 10px -10px -10px;border:1px solid var(--am);opacity:.2;pointer-events:none}
+.hphoto img{width:100%;height:100%;object-fit:cover;display:block}
+@media(max-width:840px){#hero{grid-template-columns:1fr;justify-items:center}.hphoto{width:clamp(120px,40vw,180px);margin-bottom:24px;order:-1}.hh1{max-width:none}}
 
-/* ── ABOUT ── */
-#about{background:var(--sf)}
-.atxt p{font-size:1.05rem;color:var(--tx2);line-height:1.84;margin-bottom:18px}
-.atxt p:last-child{margin-bottom:0}
-.atxt strong{color:var(--tx);font-weight:600}
-.atxt em{color:var(--tx2);font-style:italic}
+/* ── TWO-COLUMN PARITY GRID (Perspektiven + Kompetenzen) ── */
+.edg{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+@media(max-width:720px){.edg{grid-template-columns:1fr}}
+.edc{background:var(--sf);border:1px solid var(--bd);padding:32px}
+.edd{font-family:'Space Grotesk',sans-serif;font-size:1.05rem;font-weight:700;color:var(--tx);margin-bottom:3px}
+.edsp{width:100%;height:1px;background:var(--bd);margin-bottom:18px;margin-top:18px}
+/* Spans both columns for the shared foundation row. */
+.edc-wide{grid-column:1/-1}
+/* Sections sitting on --sf invert the card fill so cards stay readable. */
+.on-sf .edc{background:var(--bg)}
 
-/* ── ACHIEVEMENTS ── */
-#achievements{background:var(--bg)}
-.acg{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:16px;margin-bottom:18px}
-.acc{background:var(--sf);border:1px solid var(--bd);padding:26px;transition:border-color .2s}
-.acc:hover{border-color:oklch(36% .06 242)}
-.acn{font-family:'Space Grotesk',sans-serif;font-size:2.4rem;font-weight:700;color:var(--am);line-height:1;margin-bottom:7px}
-.act{font-family:'Space Grotesk',sans-serif;font-size:.84rem;font-weight:600;color:var(--tx);margin-bottom:4px}
-.acd{font-size:.78rem;color:var(--tx3);line-height:1.55}
-.acall{background:oklch(93% .012 242);border:1px solid var(--bd);border-left:3px solid var(--am);padding:18px 24px;display:flex;gap:14px;align-items:flex-start}
-.acall-ic{color:var(--am);font-size:1rem;flex-shrink:0;line-height:1.65;font-weight:700}
-.acall-tx{font-size:.9rem;color:var(--tx2);line-height:1.65}
-.acall-tx strong{color:var(--tx);font-weight:600}
+/* Perspective item list — equal treatment in both columns. */
+.pv{list-style:none}
+.pv li{font-size:.97rem;color:var(--tx2);line-height:1.75;padding:14px 0;border-top:1px solid var(--bd)}
+.pv li:first-child{border-top:none;padding-top:0}
+.pv li:last-child{padding-bottom:0}
 
-/* ── SKILLS ── */
-#skills{background:var(--sf)}
-.skg{display:grid;grid-template-columns:repeat(auto-fill,minmax(248px,1fr));gap:16px}
-.sg{background:var(--bg);border:1px solid var(--bd);padding:26px}
-.sgt{font-family:'Space Grotesk',sans-serif;font-size:.64rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--am);margin-bottom:14px}
+/* ── SKILL TAGS ── */
 .tgs{display:flex;flex-wrap:wrap;gap:7px}
 .tg{font-family:'Space Grotesk',sans-serif;font-size:.77rem;font-weight:500;padding:5px 11px;background:var(--sf);border:1px solid var(--bd);color:var(--tx2)}
+.on-sf .tg{background:var(--sf)}
+.reps{display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:18px}
+.rep{font-family:'Space Grotesk',sans-serif;font-size:.76rem;font-weight:600;color:var(--am)}
+.rep::before{content:'→ '}
+.rep:hover{color:var(--am2)}
 
-/* ── PROJECTS ── */
-#projects{background:var(--bg)}
+/* ── WORK CARDS ── */
 .plist{display:flex;flex-direction:column;gap:18px}
 .pc{background:var(--sf);border:1px solid var(--bd);padding:30px 36px;transition:border-color .2s}
 .pc:hover{border-color:oklch(35% .06 242)}
 .ph{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;margin-bottom:4px}
-.pt{font-family:'Space Grotesk',sans-serif;font-size:1.1rem;font-weight:700;color:var(--tx);letter-spacing:-.01em}
-.pb{font-family:'Space Grotesk',sans-serif;font-size:.68rem;font-weight:600;letter-spacing:.08em;color:var(--tx3);border:1px solid var(--bd);padding:4px 10px;flex-shrink:0;white-space:nowrap}
-.po{font-family:'Space Grotesk',sans-serif;font-size:.78rem;font-weight:500;color:var(--tx3);margin-bottom:16px}
-.psep{width:36px;height:1px;background:var(--bd);margin-bottom:14px}
-.pd{font-size:.97rem;color:var(--tx2);line-height:1.75;margin-bottom:18px}
-.ptgs{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}
-.ptg{font-family:'Space Grotesk',sans-serif;font-size:.72rem;font-weight:500;padding:3px 9px;background:var(--el);border:1px solid var(--bd);color:var(--tx3)}
-.phl{font-family:'Space Grotesk',sans-serif;font-size:.76rem;font-weight:700;color:var(--am)}
-.phl::before{content:'→ '}
+.pt{font-family:'Space Grotesk',sans-serif;font-size:1.1rem;font-weight:700;color:var(--tx);letter-spacing:-.01em;line-height:1.35}
+.pb{font-family:'Space Grotesk',sans-serif;font-size:.68rem;font-weight:600;letter-spacing:.08em;color:var(--tx2);border:1px solid var(--bd);padding:4px 10px;flex-shrink:0;white-space:nowrap}
+.po{font-family:'Space Grotesk',sans-serif;font-size:.78rem;font-weight:500;color:var(--tx2);margin-bottom:16px}
+.psep{width:36px;height:1px;background:var(--bd);margin-bottom:20px}
+/* Sub-label inside a work card. Same spec as the .sgt group label it replaces. */
+.pl{font-family:'Space Grotesk',sans-serif;font-size:.64rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--am);margin-bottom:6px}
+.pd{font-size:.97rem;color:var(--tx2);line-height:1.75;margin-bottom:20px}
+.pd:last-child{margin-bottom:0}
+.pnote{font-size:.88rem;font-style:italic;color:var(--tx2);line-height:1.7;border-top:1px solid var(--bd);padding-top:16px;margin-top:4px}
 
-/* ── RECOMMENDATIONS ── */
-#recommendations{background:var(--sf)}
+/* Unresolved content, deliberately visible rather than silently filled. */
+.todo{background:var(--el);border:1px solid var(--bd);border-left:3px solid var(--am);padding:18px 24px;display:flex;gap:14px;align-items:flex-start;margin-bottom:20px}
+.todo-ic{font-family:'Space Grotesk',sans-serif;color:var(--am);font-size:.64rem;font-weight:600;letter-spacing:.2em;flex-shrink:0;line-height:1.9}
+.todo-tx{font-size:.9rem;color:var(--tx2);line-height:1.65}
+
+/* ── PROSE ── */
+.atxt{max-width:580px}
+.atxt p{font-size:1.05rem;color:var(--tx2);line-height:1.84;margin-bottom:18px}
+.atxt p:last-child{margin-bottom:0}
+.atxt strong{color:var(--tx);font-weight:600}
+
+/* ── REFERENCES ── */
 .tgd{display:grid;grid-template-columns:1fr 1fr;gap:22px}
 @media(max-width:720px){.tgd{grid-template-columns:1fr}}
 .tc{background:var(--el);border:1px solid var(--bd);padding:36px 40px;display:flex;flex-direction:column;gap:22px}
@@ -137,460 +153,435 @@ section{scroll-margin-top:var(--nh)}
 .tq{font-size:.975rem;font-style:italic;color:var(--tx2);line-height:1.8;flex:1}
 .tau{border-top:1px solid var(--bd);padding-top:18px}
 .tn{font-family:'Space Grotesk',sans-serif;font-size:.875rem;font-weight:600;color:var(--tx);margin-bottom:2px}
-.tr{font-size:.77rem;color:var(--tx3)}
-
-/* ── ACADEMIC ── */
-#academic{background:var(--bg)}
-.edg{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-@media(max-width:720px){.edg{grid-template-columns:1fr}}
-.edc{background:var(--sf);border:1px solid var(--bd);padding:32px}
-.edd{font-family:'Space Grotesk',sans-serif;font-size:1.05rem;font-weight:700;color:var(--tx);margin-bottom:3px}
-.edi{font-family:'Space Grotesk',sans-serif;font-size:.82rem;font-weight:500;color:var(--tx2);margin-bottom:2px}
-.edt{font-size:.78rem;color:var(--tx3);margin-bottom:20px}
-.edsp{width:100%;height:1px;background:var(--bd);margin-bottom:18px}
-.edrs{display:flex;flex-direction:column;gap:9px}
-.edr{display:flex;justify-content:space-between;align-items:baseline;gap:16px}
-.edk{font-size:.82rem;color:var(--tx3)}
-.edv{font-family:'Space Grotesk',sans-serif;font-size:.88rem;font-weight:600;color:var(--tx)}
-.edv.hi{color:var(--am)}
-
-/* ── CTA BAND ── */
-.ctab{background:var(--sf);border-top:1px solid var(--bd);border-bottom:1px solid var(--bd);padding:32px clamp(20px,7vw,108px);display:flex;justify-content:space-between;align-items:center;gap:32px;flex-wrap:wrap}
-.ctabt{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.1rem,2vw,1.5rem);font-weight:600;color:var(--tx);max-width:580px;line-height:1.4;letter-spacing:-.01em}
-.ctabb{display:flex;gap:12px;flex-wrap:wrap;flex-shrink:0}
+.tr{font-size:.77rem;color:var(--tx2)}
 
 /* ── CONTACT ── */
-#contact{background:oklch(91% .012 242);scroll-margin-top:var(--nh);padding:60px clamp(20px,7vw,108px);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
-.cth{font-family:'Space Grotesk',sans-serif;font-size:clamp(2rem,4vw,3.5rem);font-weight:700;letter-spacing:-.022em;color:var(--tx);margin-bottom:16px}
+#kontakt{background:oklch(91% .012 242);scroll-margin-top:var(--nh);padding:60px clamp(20px,7vw,108px);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+.cth{font-family:'Space Grotesk',sans-serif;font-size:clamp(2rem,4vw,3.5rem);font-weight:700;letter-spacing:-.022em;line-height:1.1;color:var(--tx);margin-bottom:16px}
 .cts{font-size:1rem;font-weight:300;color:var(--tx2);max-width:480px;line-height:1.75;margin-bottom:40px}
-.cti{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:12px 24px;margin-bottom:40px}
-.ci{font-family:'Space Grotesk',sans-serif;font-size:.82rem;font-weight:500;color:var(--tx2)}
-.ci-sep{color:var(--tx3);font-size:.7rem}
 .ctbs{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
 
 /* ── FOOTER ── */
 footer{background:oklch(88% .014 242);border-top:1px solid var(--bd);padding:24px clamp(20px,7vw,108px);display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
-.fc{font-size:.76rem;color:var(--tx3)}
+/* --tx3 on this fill is 3.37:1 and fails AA, so footer text uses --tx2. */
+.fc{font-size:.76rem;color:var(--tx2)}
+
+/* ── MOTION ── */
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+  .bp:hover{transform:none}
+}
 </style>
 </head>
 <body>
 
+<a href="#arbeiten" class="skip" data-key="skip">Zum Inhalt springen</a>
+
 <!-- ── NAV ── -->
 <nav>
-  <a href="#hero" class="nl">JT<b>.</b></a>
+  <a href="#hero" class="nl" aria-label="Janmesh Thakare">JT<b>.</b></a>
   <ul>
-    <li><a href="#about"           data-key="navAbout">About</a></li>
-    <li><a href="#projects"        data-key="navProj">Projects</a></li>
-    <li><a href="#skills"          data-key="navSkills">Skills</a></li>
-    <li><a href="#contact"         data-key="navContact">Contact</a></li>
+    <li><a href="#arbeiten"     data-key="navWork">Arbeiten</a></li>
+    <li><a href="#kompetenzen"  data-key="navSkills">Kompetenzen</a></li>
+    <li><a href="#ki"           data-key="navAI">KI</a></li>
+    <li><a href="#ueber"        data-key="navAbout">Über mich</a></li>
+    <li><a href="#kontakt"      data-key="navContact">Kontakt</a></li>
   </ul>
   <div class="nr">
     <div class="lsw">
-      <button class="lb on" onclick="setLang('en')">EN</button>
-      <button class="lb"    onclick="setLang('de')">DE</button>
+      <button class="lb"    onclick="setLang('en')">EN</button>
+      <button class="lb on" onclick="setLang('de')">DE</button>
     </div>
-    <a href="uploads/Janmesh_Thakare_CV.pdf" class="bp" data-key="navCV" download>Download CV</a>
   </div>
 </nav>
 
-<!-- ── HERO ── -->
-<section id="hero" data-screen-label="Hero">
+<main>
+
+<!-- ── 1 · HERO ── -->
+<section id="hero">
   <div class="hgrid" aria-hidden="true"></div>
   <div class="hb">
-    <p class="ey" data-key="eyebrow">Systems Engineer · Munich, DE</p>
-    <h1 class="hh1">
-      <span data-key="h1a">Systems Engineer.</span><br>
-      <span data-key="h1b">Top-Rated by BMW.</span>
-    </h1>
-    <p class="hsub" data-key="sub">M.Sc. Mechatronics with expertise in MBSE, SysML, and safety-critical system architecture. Two consecutive BMW placements — both rated at the highest performance band. Ready for German-speaking teams.</p>
-    <div class="hcta">
-      <a href="uploads/Janmesh_Thakare_CV.pdf" class="bp" data-key="cta1" download>Download CV</a>
-      <a href="#about" class="bs" data-key="cta2">Learn more ↓</a>
-    </div>
-    <div class="creds">
-      <span class="chip">M.Sc. Mechatronics</span>
-      <span class="chip">MBSE / SysML</span>
-      <span class="chip">BMW — Rated A</span>
-      <span class="chip">German C1</span>
-      <span class="chip">ISO 15288</span>
+    <h1 class="hh1" data-key="h1">Ich übersetze unklare Anforderungen in Systeme, die man bauen und prüfen kann.</h1>
+    <p class="hsub" data-key="hsub">M.Sc. Mechatronik · Systems Engineering bei der BMW AG · eigene Webanwendungen von der Anforderung bis zum Betrieb</p>
+    <div>
+      <a href="#arbeiten" class="bp" data-key="hcta">Zu meinen Arbeiten</a>
     </div>
   </div>
-  <div class="hphoto" aria-label="Profile photo">
-    <img src="uploads/Bild_JanmeshThakare.jpg" alt="Janmesh Thakare"
-         style="width:100%;height:100%;object-fit:cover;display:block">
+  <div class="hphoto">
+    <img src="uploads/Bild_JanmeshThakare.jpg" alt="Porträtfoto von Janmesh Thakare" width="248" height="331">
   </div>
 </section>
 
-<!-- ── ABOUT ── -->
-<section id="about" class="sf" data-screen-label="About">
-  <p class="ey" data-key="sAbout">About</p>
-  <h2 class="h2" data-key="hAbout">Engineer. Analyst. Team player.</h2>
-  <div class="atxt">
-    <p data-key="p1">I'm a Mechatronics M.Sc. based in Munich, specializing in Model-Based Systems Engineering. At <strong>BMW AG</strong>, I completed two consecutive engagements — first as a pre-development UX intern, then as a thesis student — receiving top-band performance ratings in both.</p>
-    <p data-key="p2">My thesis, <em>Dynamic Suppression: Innovation in Suppression Technologies for Advanced Airbag Systems</em>, involved deriving 35 SysML requirement elements across four hierarchy levels, modelling a complete system architecture with 22 blocks, 5 interface blocks and 12 ports, and running ISO 15288-compliant simulation-based verification in MATLAB/Simulink using Design-of-Experiments in JMP Pro.</p>
-    <p data-key="p3">Fluent in German (C1) and English (C2). Experienced coordinating across Engineering, Safety, Hardware, and Management — and ready to contribute from day one in German-speaking environments.</p>
-  </div>
-</section>
-
-<!-- ── ACHIEVEMENTS ── -->
-<section id="achievements" class="sa" data-screen-label="Achievements">
-  <p class="ey" data-key="sAch">Achievements</p>
-  <h2 class="h2" data-key="hAch">Proven performance.</h2>
-  <div class="acg">
-    <div class="acc">
-      <div class="acn" data-key="ac1n">A</div>
-      <div class="act" data-key="ac1t">BMW Top Performance Band</div>
-      <div class="acd" data-key="ac1d">Highest evaluation grade for both Initiative and Teamwork — in the internship and thesis evaluations at BMW AG.</div>
+<!-- ── 2 · ZWEI PERSPEKTIVEN, EINE METHODE ── -->
+<section id="perspektiven" class="sa on-sf" style="background:var(--sf)">
+  <p class="ey" data-key="eyPersp">Methode</p>
+  <h2 class="h2 tight" data-key="hPersp">Zwei Perspektiven, eine Methode</h2>
+  <p class="lead" data-key="pPersp">Ob eine Rückhaltefunktion im Fahrzeug oder ein Planungswerkzeug für ein Abfertigungsteam, die Arbeit ist dieselbe. Mehrere Beteiligte wollen Unterschiedliches, und daraus muss etwas Prüfbares werden.</p>
+  <!-- Equal width, equal item count, identical heading treatment. Neither column is subordinate. -->
+  <div class="edg">
+    <div class="edc">
+      <h3 class="edd" data-key="perspAt">Systems Engineering</h3>
+      <div class="edsp"></div>
+      <ul class="pv">
+        <li data-key="perspA1">Anforderungen aus technischen und regulatorischen Quellen ableiten</li>
+        <li data-key="perspA2">Architektur und Entscheidungslogik modellieren</li>
+        <li data-key="perspA3">Testprozedur definieren und das Verhalten verifizieren</li>
+        <li data-key="perspA4">Nach ISO/IEC/IEEE 15288 und 29148</li>
+      </ul>
     </div>
-    <div class="acc">
-      <div class="acn" data-key="ac2n">1.3</div>
-      <div class="act" data-key="ac2t">Master's Thesis Grade</div>
-      <div class="acd" data-key="ac2d">Sehr Gut — BMW AG × Universität Siegen, 2025. Thesis approach actively pursued for BMW production implementation.</div>
-    </div>
-    <div class="acc">
-      <div class="acn" data-key="ac3n">35</div>
-      <div class="act" data-key="ac3t">SysML Requirement Elements</div>
-      <div class="acd" data-key="ac3d">Across 4 hierarchy levels with full ISO 15288-compliant traceability to architecture, behaviour, and verification.</div>
-    </div>
-    <div class="acc">
-      <div class="acn" data-key="ac4n">1.8</div>
-      <div class="act" data-key="ac4t">B.Eng. German Grade</div>
-      <div class="acd" data-key="ac4d">First Class with Distinction — Savitribai Phule Pune University, 2020. Equivalent: Gut.</div>
-    </div>
-  </div>
-  <div class="acall">
-    <span class="acall-ic">→</span>
-    <span class="acall-tx" data-key="acCall">BMW supervisors confirmed that the approach developed in Janmesh's thesis is <strong>already being pursued for production implementation</strong> — a rare outcome for a Master's project.</span>
-  </div>
-</section>
-
-<!-- ── TECHNICAL STRENGTHS ── -->
-<section id="skills" class="sa" data-screen-label="Skills">
-  <p class="ey" data-key="sSkills">Technical Strengths</p>
-  <h2 class="h2" data-key="hSkills">What I work with.</h2>
-  <div class="skg">
-    <div class="sg">
-      <div class="sgt" data-key="sg1">MBSE &amp; Architecture</div>
-      <div class="tgs">
-        <span class="tg">SysML</span><span class="tg">MagicDraw / Cameo</span>
-        <span class="tg">ISO 15288</span><span class="tg">ISO 29148</span>
-        <span class="tg">Requirements Mgmt</span><span class="tg">Traceability</span>
-        <span class="tg">OOSEM</span>
-      </div>
-    </div>
-    <div class="sg">
-      <div class="sgt" data-key="sg2">Simulation &amp; Verification</div>
-      <div class="tgs">
-        <span class="tg">MATLAB / Simulink</span><span class="tg">COMSOL</span>
-        <span class="tg">JMP Pro (DOE)</span><span class="tg">Verification Planning</span>
-        <span class="tg">Statistical Analysis</span>
-      </div>
-    </div>
-    <div class="sg">
-      <div class="sgt" data-key="sg3">CAD &amp; Prototyping</div>
-      <div class="tgs">
-        <span class="tg">CATIA V5</span><span class="tg">Pro/E Wildfire 4.0</span>
-        <span class="tg">Prototype Build</span><span class="tg">Mechanical Integration</span>
-      </div>
-    </div>
-    <div class="sg">
-      <div class="sgt" data-key="sg4">Programming</div>
-      <div class="tgs">
-        <span class="tg">Python</span><span class="tg">MATLAB</span>
-        <span class="tg">C++</span><span class="tg">SQL</span>
-        <span class="tg">PyTorch</span><span class="tg">Scikit-learn</span>
-        <span class="tg">TensorFlow</span>
-      </div>
-    </div>
-    <div class="sg">
-      <div class="sgt" data-key="sg5">Methods &amp; Process</div>
-      <div class="tgs">
-        <span class="tg">Agile / Scrum</span><span class="tg">Stakeholder Coordination</span>
-        <span class="tg">Technical Reviews</span><span class="tg">DOE</span>
-        <span class="tg">Cross-functional Teams</span>
-      </div>
-    </div>
-    <div class="sg">
-      <div class="sgt" data-key="sg6">Languages</div>
-      <div class="tgs">
-        <span class="tg">German — C1</span><span class="tg">English — C2</span>
-        <span class="tg">Marathi — Native</span><span class="tg">Hindi — Native</span>
-      </div>
+    <div class="edc">
+      <h3 class="edd" data-key="perspBt">Produkt und Projekt</h3>
+      <div class="edsp"></div>
+      <ul class="pv">
+        <li data-key="perspB1">Anforderungen aus Gesprächen mit Beteiligten ableiten</li>
+        <li data-key="perspB2">Funktionsumfang festlegen und begründen</li>
+        <li data-key="perspB3">Abnahmekriterien definieren und im Betrieb nachhalten</li>
+        <li data-key="perspB4">Von der ersten Idee bis zum laufenden Support</li>
+      </ul>
     </div>
   </div>
 </section>
 
-<!-- ── FEATURED PROJECTS ── -->
-<section id="projects" class="sa" data-screen-label="Projects" style="background:var(--sf)">
-  <p class="ey" data-key="sProj">Featured Projects</p>
-  <h2 class="h2" data-key="hProj">Selected work.</h2>
+<!-- ── 3 · ARBEITEN ── -->
+<!-- Card order is chronological by recency (2026, 2024–2025, 2024). It is not a ranking.
+     All three cards share one template: identical width, padding, border, heading level
+     (h3.pt), badge treatment and sub-label spec. No card is featured. -->
+<section id="arbeiten" class="sa">
+  <p class="ey" data-key="eyWork">Arbeiten</p>
+  <h2 class="h2" data-key="hWork">Drei Beispiele.</h2>
   <div class="plist">
 
-    <div class="pc">
+    <!-- Card 1 · 2026 -->
+    <article class="pc">
       <div class="ph">
-        <span class="pt" data-key="p1t">Dynamic Automatic Suppression System (DASS)</span>
-        <span class="pb" data-key="p1b">BMW Masterarbeit · 2025</span>
+        <h3 class="pt" data-key="w1t">Terminplanung für die Flughafenabfertigung</h3>
+        <span class="pb" data-key="w1b">Eigenprojekt · 2026</span>
       </div>
-      <p class="po" data-key="p1o">BMW AG — FIZ Munich · Safety-critical vehicle function</p>
+      <p class="po" data-key="w1o">Anforderung, Umsetzung und Betrieb in eigener Verantwortung</p>
       <div class="psep"></div>
-      <p class="pd" data-key="p1d">Derived 35 SysML requirement elements from stakeholder and regulatory inputs across four hierarchy levels, modelled a complete system architecture (22 blocks, 5 interface blocks, 12 ports) in MagicDraw/Cameo, and validated the system in MATLAB/Simulink using DOE in JMP Pro — full ISO 15288 traceability throughout.</p>
-      <div class="ptgs">
-        <span class="ptg">SysML</span><span class="ptg">MagicDraw / Cameo</span>
-        <span class="ptg">MATLAB / Simulink</span><span class="ptg">ISO 15288</span>
-        <span class="ptg">DOE / JMP Pro</span><span class="ptg">CATIA V5</span>
+      <p class="pl" data-key="lProblem">Problem</p>
+      <p class="pd" data-key="w1a">Die Terminabstimmung zwischen Stationsleitung, Sicherheitsbereich und Abfertigungsteam lief über verstreute Kanäle. Wer wann verfügbar war, wusste niemand vollständig.</p>
+      <p class="pl" data-key="lReq">Anforderungen</p>
+      <p class="pd" data-key="w1c">Ich habe die Beteiligten einzeln befragt, weil jede Gruppe etwas anderes brauchte. Die Leitung wollte Planbarkeit, der Sicherheitsbereich klare Freigaben, die Kolleginnen und Kollegen wollten vor allem Tempo. Daraus entstand die Planungs- und Freigabelogik.</p>
+      <p class="pl" data-key="lImpl">Umsetzung</p>
+      <p class="pd" data-key="w1d">Eine Weboberfläche, die ohne Einweisung bedienbar ist. PHP, HTML und CSS, entwickelt mit Claude Code.</p>
+      <p class="pl" data-key="lOps">Betrieb</p>
+      <p class="pd" data-key="w1e">Ich betreibe das Werkzeug selbst als Administrator und bin erste Anlaufstelle im Support.</p>
+      <p class="pl" data-key="lLearn">Was ich daraus gelernt habe</p>
+      <div class="todo">
+        <span class="todo-ic">TODO</span>
+        <span class="todo-tx" data-key="w1f">Platzhalter — dieser Abschnitt wartet auf Inhalt: welche Funktion tatsächlich genutzt wurde, welche ignoriert wurde und was daraufhin geändert wurde.</span>
       </div>
-      <p class="phl" data-key="p1h">Approach confirmed for BMW production implementation</p>
-    </div>
+      <div class="todo">
+        <span class="todo-ic">TODO</span>
+        <span class="todo-tx" data-key="w1g">Platzhalter — anonymisierter Screenshot bzw. Wireframe des Werkzeugs folgt.</span>
+      </div>
+    </article>
 
-    <div class="pc">
+    <!-- Card 2 · 2024–2025 -->
+    <article class="pc">
       <div class="ph">
-        <span class="pt" data-key="p2t">Mobile Innovation Lighting Rig</span>
-        <span class="pb" data-key="p2b">BMW UX Pre-dev · 2024</span>
+        <h3 class="pt" data-key="w2t">Anforderungen für ein sicherheitskritisches Fahrzeugsystem</h3>
+        <span class="pb" data-key="w2b">Masterarbeit BMW AG · 2024–2025</span>
       </div>
-      <p class="po" data-key="p2o">BMW AG — Innovationsprogramm, Vorentwicklung Nutzererlebnis</p>
+      <p class="po" data-key="w2o">Vorentwicklung Nutzererlebnis</p>
       <div class="psep"></div>
-      <p class="pd" data-key="p2d">Designed and built a structural lighting rig for scenario-based vehicle demonstrations at BMW's FIZ research centre. Took full ownership from requirements elicitation and CATIA V5 modelling through parts procurement, mechanical assembly, and logistics for mobile deployments across internal Engineering and Management stakeholder events.</p>
-      <div class="ptgs">
-        <span class="ptg">CATIA V5</span><span class="ptg">Requirements Mgmt</span>
-        <span class="ptg">Prototype Build</span><span class="ptg">Agile Workshops</span>
-        <span class="ptg">Stakeholder Presentations</span>
-      </div>
-    </div>
+      <p class="pl" data-key="lTask">Aufgabe</p>
+      <p class="pd" data-key="w2a">Ein System sollte anhand der Sitzbelegung über die Auslösung einer Rückhaltefunktion entscheiden. Die Vorgaben kamen aus internen technischen Quellen und aus externer Regulierung.</p>
+      <p class="pl" data-key="lReq2">Anforderungen</p>
+      <p class="pd" data-key="w2c">Beide Quellen habe ich zusammengeführt und daraus 35 Anforderungselemente über vier Hierarchieebenen abgeleitet.</p>
+      <p class="pl" data-key="lImpl2">Umsetzung</p>
+      <p class="pd" data-key="w2d">Systemarchitektur und Entscheidungslogik in MagicDraw modelliert, mit 22 Blocks, 5 Interface Blocks und 12 Ports.</p>
+      <p class="pl" data-key="lVerif">Absicherung</p>
+      <p class="pd" data-key="w2e">Testprozedur definiert und die Funktion über 20 in JMP Pro erzeugte DOE-Testfälle abgesichert. Das Systemverhalten anschließend im Cameo Simulation Toolkit verifiziert.</p>
+      <p class="pl" data-key="lResult">Ergebnis</p>
+      <p class="pd" data-key="w2f">Die Ergebnisse wurden vom Fachbereich übernommen. Bewertung 1,3.</p>
+      <p class="pnote" data-key="w2n">Inhalte unterliegen einem Sperrvermerk. Details gerne im Gespräch.</p>
+    </article>
 
-    <a href="projects/pick-place-robot.html" class="pc">
+    <!-- Card 3 · 2024 -->
+    <article class="pc">
       <div class="ph">
-        <span class="pt" data-key="p3t">Pick-and-Place Robot Simulation</span>
-        <span class="pb" data-key="p3b">M.Sc. Project · 2023</span>
+        <h3 class="pt" data-key="w3t">Nutzererlebnis zu funktionalen Anforderungen</h3>
+        <span class="pb" data-key="w3b">BMW AG · 2024</span>
       </div>
-      <p class="po" data-key="p3o">Universität Siegen — M.Sc. Mechatronics</p>
+      <p class="po" data-key="w3o">Vorentwicklung Nutzererlebnis</p>
       <div class="psep"></div>
-      <p class="pd" data-key="p3d">Modelled a pick-and-place robot in MATLAB and developed control algorithms for precise end-effector positioning. Simulated system behaviour end-to-end and validated control performance through systematic comparison against reference data, demonstrating positioning accuracy and control robustness.</p>
-      <div class="ptgs">
-        <span class="ptg">MATLAB</span><span class="ptg">Control Algorithms</span>
-        <span class="ptg">Simulation</span><span class="ptg">Robotics</span>
-        <span class="ptg">Kinematics</span>
-      </div>
-    </a>
-
-    <a href="projects/shm-vibration-simulation.html" class="pc">
-      <div class="ph">
-        <span class="pt" data-key="p4t">Structural Health Monitoring Vibration Simulation</span>
-        <span class="pb" data-key="p4b">Studienarbeit · 2024</span>
-      </div>
-      <p class="po" data-key="p4o">University of Siegen — Structural Health Monitoring</p>
-      <div class="psep"></div>
-      <p class="pd" data-key="p4d">Built a COMSOL Multiphysics 6.1 and MATLAB LiveLink simulation pipeline to generate realistic vibration time series for Structural Health Monitoring algorithm development. Compared 1D Timoshenko Beam Physics with 3D Solid Mechanics, validated eigenfrequencies, extracted state-space matrices, and applied sssMOR model-order reduction to cut computation time by 60–67%.</p>
-      <div class="ptgs">
-        <span class="ptg">COMSOL 6.1</span><span class="ptg">MATLAB LiveLink</span>
-        <span class="ptg">FEM</span><span class="ptg">Modal Analysis</span>
-        <span class="ptg">State-Space Models</span><span class="ptg">sssMOR</span>
-        <span class="ptg">Structural Dynamics</span><span class="ptg">SHM</span>
-      </div>
-      <p class="phl" data-key="p4h">Full simulation pipeline for SHM training-data generation</p>
-    </a>
+      <p class="pl" data-key="lTask2">Aufgabe</p>
+      <p class="pd" data-key="w3a">Für Interieurkomponenten sollten Nutzungssituationen so beschrieben werden, dass die Fachbereiche damit weiterarbeiten können.</p>
+      <p class="pl" data-key="lApproach">Vorgehen</p>
+      <p class="pd" data-key="w3c">Nutzererlebnisse im Detail beschrieben und daraus funktionale Anforderungen abgeleitet. Darstellungsszenarien in Figma aufbereitet und mit dem Design- und dem UX-Team abgestimmt.</p>
+      <p class="pl" data-key="lImpl3">Umsetzung</p>
+      <p class="pd" data-key="w3d">Prototypen in CATIA V5 und lauffähige Demos gebaut, CAD-Daten an den Prototypenbau übergeben, mit dem E/E-Fachbereich an der technischen Umsetzung gearbeitet.</p>
+      <p class="pl" data-key="lAround">Drumherum</p>
+      <p class="pd" data-key="w3e">Benchmark-Untersuchungen zu Einzelthemen durchgeführt und dokumentiert, interne Workshops konzipiert und moderiert, Lieferantentermine begleitet.</p>
+    </article>
 
   </div>
 </section>
 
-<!-- ── RECOMMENDATIONS ── -->
-<section id="recommendations" class="sf" data-screen-label="Recommendations">
-  <p class="ey" data-key="sRecs">Recommendations</p>
-  <h2 class="h2" data-key="hRecs">What colleagues say.</h2>
+<!-- ── 4 · KOMPETENZEN ── -->
+<section id="kompetenzen" class="sa on-sf" style="background:var(--sf)">
+  <p class="ey" data-key="eySkills">Kompetenzen</p>
+  <h2 class="h2" data-key="hSkills">Womit ich arbeite.</h2>
+  <!-- Two equal columns, six items each, then one shared full-width row. -->
+  <div class="edg">
+    <div class="edc">
+      <h3 class="edd" data-key="kAt">Systems Engineering</h3>
+      <div class="edsp"></div>
+      <div class="tgs">
+        <span class="tg" data-key="kA1">Anforderungsanalyse und Spezifikation</span>
+        <span class="tg" data-key="kA2">SysML in MagicDraw und Cameo</span>
+        <span class="tg" data-key="kA3">Systemarchitektur und Schnittstellen</span>
+        <span class="tg" data-key="kA4">Verifikation und Testprozeduren</span>
+        <span class="tg" data-key="kA5">ISO/IEC/IEEE 15288 und 29148</span>
+        <span class="tg" data-key="kA6">DOE und Datenauswertung in JMP Pro</span>
+      </div>
+    </div>
+    <div class="edc">
+      <h3 class="edd" data-key="kBt">Produkt und Projekt</h3>
+      <div class="edsp"></div>
+      <div class="tgs">
+        <span class="tg" data-key="kB1">Anforderungserhebung bei Beteiligten</span>
+        <span class="tg" data-key="kB2">Projektplanung und Stakeholder-Koordination</span>
+        <span class="tg" data-key="kB3">Funktionsumfang und Abnahmekriterien</span>
+        <span class="tg" data-key="kB4">Workshop-Moderation</span>
+        <span class="tg" data-key="kB5">Präsentation vor Fachbereichen</span>
+        <span class="tg" data-key="kB6">Betrieb und Support eigener Anwendungen</span>
+      </div>
+    </div>
+    <div class="edc edc-wide">
+      <h3 class="edd" data-key="kCt">Womit ich baue</h3>
+      <div class="edsp"></div>
+      <div class="tgs">
+        <span class="tg">Claude Code</span>
+        <span class="tg">Python</span><span class="tg">PyTorch</span><span class="tg">TensorFlow</span>
+        <span class="tg">PHP</span><span class="tg">HTML</span><span class="tg">CSS</span>
+        <span class="tg">Figma</span>
+        <span class="tg">CATIA V5</span><span class="tg">COMSOL</span>
+        <span class="tg">MATLAB</span>
+      </div>
+      <div class="reps">
+        <a class="rep" href="https://github.com/A1phex/augmix" target="_blank" rel="noopener" data-key="repAug">AugMix-Fork — ResNet18 und ConvNeXt_tiny ergänzt</a>
+        <a class="rep" href="projects/shm-vibration-simulation.html" data-key="repShm">Vibrationssimulation für Structural Health Monitoring</a>
+        <a class="rep" href="projects/pick-place-robot.html" data-key="repRob">Pick-and-Place-Robotersimulation</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── 5 · WIE ICH MIT KI ARBEITE ── -->
+<section id="ki" class="sa">
+  <p class="ey" data-key="eyAI">Arbeitsweise</p>
+  <h2 class="h2" data-key="hAI">Wie ich mit KI arbeite</h2>
+  <div class="atxt">
+    <p data-key="ai1">Meine Projekte entstehen mit Claude Code. Das Werkzeug übernimmt Implementierung, Refactoring und den ersten Entwurf. Was es nicht übernimmt, ist die Entscheidung, welche Funktion überhaupt gebaut werden soll und woran ich merke, dass sie funktioniert. Diese Trennung halte ich bewusst ein.</p>
+    <p data-key="ai2">Aus meinen Machine-Learning-Projekten weiß ich außerdem, wie schnell ein Modell überzeugend aussieht und trotzdem an den Randfällen versagt.</p>
+  </div>
+</section>
+
+<!-- ── 6 · ÜBER MICH ── -->
+<section id="ueber" class="sa" style="background:var(--sf)">
+  <p class="ey" data-key="eyAbout">Über mich</p>
+  <h2 class="h2" data-key="hAbout">Kurz zu mir.</h2>
+  <div class="atxt">
+    <p data-key="ab1">M.Sc. Mechatronik der Universität Siegen, Abschlussarbeit bei der BMW AG mit 1,3 bewertet. Bachelor in Maschinenbau mit First Class with Distinction. Zertifiziert in Product Development und Systems Engineering nach ISO/IEC/IEEE 15288 und 29148. Deutsch C1, Englisch C2, in München, umzugsbereit innerhalb Deutschlands.</p>
+  </div>
+</section>
+
+<!-- ── 6.5 · REFERENZEN ── -->
+<section id="referenzen" class="sa">
+  <p class="ey" data-key="eyRefs">Referenzen</p>
+  <h2 class="h2" data-key="hRefs">Was Kollegen sagen.</h2>
   <div class="tgd">
     <div class="tc">
       <div class="tqm" aria-hidden="true">"</div>
-      <p class="tq" data-key="q1">An exceptionally reliable, motivated and competent emerging professional who delivered results with a structured, analytical and self-directed working style — always on time, always above expectations.</p>
+      <p class="tq" data-key="q1">Insgesamt präsentierte sich der Masterand als äußerst zuverlässige, motivierte und kompetente Nachwuchskraft, die durch ihre strukturierte, analytische und selbstständige Arbeitsweise überzeugte — stets termingerecht und über unseren Erwartungen.</p>
       <div class="tau">
-        <p class="tn" data-key="q1n">Florian Ober</p>
-        <p class="tr" data-key="q1r">Team Lead, Pre-development Seat &amp; Restraint Systems · BMW AG</p>
+        <p class="tn">Florian Ober</p>
+        <p class="tr" data-key="q1r">Teamleiter, Vorentwicklung Sitz- &amp; Rückhaltesysteme · BMW AG</p>
       </div>
     </div>
     <div class="tc">
       <div class="tqm" aria-hidden="true">"</div>
-      <p class="tq" data-key="q2">The approach Janmesh developed is already being pursued for implementation — a rare outcome for a Master's project. His ability to clearly present complex engineering problems was consistently impressive.</p>
+      <!-- Excerpt. The opening sentence of this reference is withheld under the thesis
+           confidentiality restriction; the remainder is quoted verbatim. -->
+      <p class="tq" data-key="q2">Seine Fähigkeit, komplexe Ingenieurprobleme verständlich darzustellen, war stets beeindruckend.</p>
       <div class="tau">
-        <p class="tn" data-key="q2n">Dr.-Ing. Jens Peth</p>
-        <p class="tr" data-key="q2r">Supervisor, Universität Siegen · Institut für Konstruktion</p>
+        <p class="tn">Dr.-Ing. Jens Peth</p>
+        <p class="tr" data-key="q2r">Betreuer, Universität Siegen · Institut für Konstruktion</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ── ACADEMIC ── -->
-<section id="academic" class="sa" data-screen-label="Academic" style="background:var(--sf)">
-  <p class="ey" data-key="sAcad">Academic Background</p>
-  <h2 class="h2" data-key="hAcad">Education.</h2>
-  <div class="edg">
-    <div class="edc">
-      <p class="edd" data-key="ed1d">M.Sc. Mechatronics</p>
-      <p class="edi" data-key="ed1i">Universität Siegen — Germany</p>
-      <p class="edt" data-key="ed1t">Oct 2021 – May 2025</p>
-      <div class="edsp"></div>
-      <div class="edrs">
-        <div class="edr"><span class="edk" data-key="lOverall">Overall Grade</span><span class="edv" data-key="ed1g">2.2 (Gut)</span></div>
-        <div class="edr"><span class="edk" data-key="lThesis">Thesis</span><span class="edv hi" data-key="ed1th">1.3 — Sehr Gut</span></div>
-        <div class="edr"><span class="edk" data-key="lProj">Project Work</span><span class="edv hi" data-key="ed1pr">1.3 — Sehr Gut</span></div>
-        <div class="edr"><span class="edk" data-key="lCred">Credits</span><span class="edv">120 ECTS</span></div>
-      </div>
-    </div>
-    <div class="edc">
-      <p class="edd" data-key="ed2d">B.Eng. Mechanical Engineering</p>
-      <p class="edi" data-key="ed2i">Savitribai Phule Pune University — India</p>
-      <p class="edt" data-key="ed2t">Aug 2016 – Jul 2020</p>
-      <div class="edsp"></div>
-      <div class="edrs">
-        <div class="edr"><span class="edk" data-key="lGrade">German Grade</span><span class="edv hi">1.8 (Gut)</span></div>
-        <div class="edr"><span class="edk" data-key="lClass">Classification</span><span class="edv" data-key="ed2cl">First Class with Distinction</span></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ── DOWNLOAD CV BAND ── -->
-<div class="ctab">
-  <p class="ctabt" data-key="ctaTxt">Ready to bring MBSE expertise and BMW-validated performance to your team?</p>
-  <div class="ctabb">
-    <a href="uploads/Janmesh_Thakare_CV.pdf" class="bp" data-key="ctaCV" download>Download CV</a>
-    <a href="#contact" class="bs" data-key="ctaCont">Get in touch</a>
-  </div>
-</div>
-
-<!-- ── CONTACT ── -->
-<section id="contact" data-screen-label="Contact">
-  <p class="cth" data-key="contH">Let's connect.</p>
-  <p class="cts" data-key="contS">Available for systems engineering, robotics, and automation roles in Germany and the EU.</p>
-  <div class="cti">
-    <span class="ci" data-key="contCity">Munich, DE</span>
-    <span class="ci-sep">·</span>
-    <span class="ci">janmesh.thakare@gmail.com</span>
-    <span class="ci-sep">·</span>
-    <span class="ci">+49 157 529 122 30</span>
-  </div>
+<!-- ── 7 · KONTAKT ── -->
+<section id="kontakt">
+  <h2 class="cth" data-key="contH">In Kontakt treten.</h2>
+  <p class="cts" data-key="contS">München · umzugsbereit innerhalb Deutschlands</p>
   <div class="ctbs">
-    <a href="mailto:janmesh.thakare@gmail.com" class="bp" data-key="contEmail">Email me →</a>
-    <a href="https://www.linkedin.com/in/janmesht/" class="bs" data-key="contLI" target="_blank" rel="noopener">LinkedIn</a>
-    <a href="https://github.com/A1phex" class="bs" data-key="contGH" target="_blank" rel="noopener">GitHub</a>
-    <a href="uploads/Janmesh_Thakare_CV.pdf" class="bs" data-key="contCV" download>Download CV</a>
+    <a href="mailto:janmesh.thakare@gmail.com" class="bp" data-key="contEmail">E-Mail schreiben →</a>
+    <a href="https://www.linkedin.com/in/janmesht/" class="bs" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="https://github.com/A1phex" class="bs" target="_blank" rel="noopener">GitHub</a>
   </div>
 </section>
+
+</main>
 
 <!-- ── FOOTER ── -->
 <footer>
-  <span class="fc">Janmesh Thakare · M.Sc. Mechatronics · Munich, DE</span>
-  <span class="fc" data-key="fCopy">© 2025 · janmesh.thakare@gmail.com</span>
+  <span class="fc" data-key="fLeft">Janmesh Thakare · M.Sc. Mechatronik · München</span>
+  <span class="fc">© 2026 · janmesh.thakare@gmail.com</span>
 </footer>
 
 <script>
-/* ─────────── BILINGUAL COPY ─────────── */
+/* ─────────── BILINGUAL COPY ───────────
+   German is authoritative. English is a translation of the German. */
 var C = {
-en:{
-  navAbout:'About', navProj:'Projects', navSkills:'Skills', navContact:'Contact', navCV:'Download CV',
-  eyebrow:'Systems Engineer · Munich, DE',
-  h1a:'Systems Engineer.', h1b:'Top-Rated by BMW.',
-  sub:'M.Sc. Mechatronics with expertise in MBSE, SysML, and safety-critical system architecture. Two consecutive BMW placements — both rated at the highest performance band. Ready for German-speaking teams.',
-  cta1:'Download CV', cta2:'Learn more ↓', scrTxt:'Scroll',
-  sAbout:'About', hAbout:'Engineer. Analyst. Team player.',
-  p1:"I'm a Mechatronics M.Sc. based in Munich, specializing in Model-Based Systems Engineering. At <strong>BMW AG</strong>, I completed two consecutive engagements — first as a pre-development UX intern, then as a thesis student — receiving top-band performance ratings in both.",
-  p2:'My thesis, <em>Dynamic Suppression: Innovation in Suppression Technologies for Advanced Airbag Systems</em>, involved deriving 35 SysML requirement elements across four hierarchy levels, modelling a complete system architecture with 22 blocks, 5 interface blocks and 12 ports, and running ISO 15288-compliant simulation-based verification in MATLAB/Simulink using Design-of-Experiments in JMP Pro.',
-  p3:'Fluent in German (C1) and English (C2). Experienced coordinating across Engineering, Safety, Hardware, and Management — and ready to contribute from day one in German-speaking environments.',
-  sAch:'Achievements', hAch:'Proven performance.',
-  ac1n:'A', ac1t:'BMW Top Performance Band', ac1d:'Highest evaluation grade for both Initiative and Teamwork — in the internship and thesis evaluations at BMW AG.',
-  ac2n:'1.3', ac2t:"Master's Thesis Grade", ac2d:'Sehr Gut — BMW AG × Universität Siegen, 2025. Thesis approach actively pursued for BMW production implementation.',
-  ac3n:'35', ac3t:'SysML Requirement Elements', ac3d:'Across 4 hierarchy levels with full ISO 15288-compliant traceability to architecture, behaviour, and verification.',
-  ac4n:'1.8', ac4t:'B.Eng. German Grade', ac4d:'First Class with Distinction — Savitribai Phule Pune University, 2020. Equivalent: Gut.',
-  acCall:"BMW supervisors confirmed that the approach developed in Janmesh's thesis is <strong>already being pursued for production implementation</strong> — a rare outcome for a Master's project.",
-  sSkills:'Technical Strengths', hSkills:'What I work with.',
-  sg1:'MBSE & Architecture', sg2:'Simulation & Verification', sg3:'CAD & Prototyping',
-  sg4:'Programming', sg5:'Methods & Process', sg6:'Languages',
-  sProj:'Featured Projects', hProj:'Selected work.',
-  p1t:'Dynamic Automatic Suppression System (DASS)', p1b:'BMW Masterarbeit · 2025',
-  p1o:'BMW AG — FIZ Munich · Safety-critical vehicle function',
-  p1d:'Derived 35 SysML requirement elements from stakeholder and regulatory inputs across four hierarchy levels, modelled a complete system architecture (22 blocks, 5 interface blocks, 12 ports) in MagicDraw/Cameo, and validated the system in MATLAB/Simulink using DOE in JMP Pro — full ISO 15288 traceability throughout.',
-  p1h:'Approach confirmed for BMW production implementation',
-  p2t:'Mobile Innovation Lighting Rig', p2b:'BMW UX Pre-dev · 2024',
-  p2o:'BMW AG — Innovationsprogramm, Vorentwicklung Nutzererlebnis',
-  p2d:'Designed and built a structural lighting rig for scenario-based vehicle demonstrations at BMW\'s FIZ research centre. Took full ownership from requirements elicitation and CATIA V5 modelling through parts procurement, mechanical assembly, and logistics for mobile deployments across internal Engineering and Management stakeholder events.',
-  p3t:'Pick-and-Place Robot Simulation', p3b:'M.Sc. Project · 2023',
-  p3o:'Universität Siegen — M.Sc. Mechatronics',
-  p3d:'Modelled a pick-and-place robot in MATLAB and developed control algorithms for precise end-effector positioning. Simulated system behaviour end-to-end and validated control performance through systematic comparison against reference data, demonstrating positioning accuracy and control robustness.',
-  p4t:'Structural Health Monitoring Vibration Simulation', p4b:'Studienarbeit · 2024',
-  p4o:'University of Siegen — Structural Health Monitoring',
-  p4d:'Built a COMSOL Multiphysics 6.1 and MATLAB LiveLink simulation pipeline to generate realistic vibration time series for Structural Health Monitoring algorithm development. Compared 1D Timoshenko Beam Physics with 3D Solid Mechanics, validated eigenfrequencies, extracted state-space matrices, and applied sssMOR model-order reduction to cut computation time by 60–67%.',
-  p4h:'Full simulation pipeline for SHM training-data generation',
-  sRecs:'Recommendations', hRecs:'What colleagues say.',
-  q1:"An exceptionally reliable, motivated and competent emerging professional who delivered results with a structured, analytical and self-directed working style — always on time, always above expectations.",
-  q1n:'Florian Ober', q1r:'Team Lead, Pre-development Seat & Restraint Systems · BMW AG',
-  q2:"The approach Janmesh developed is already being pursued for implementation — a rare outcome for a Master's project. His ability to clearly present complex engineering problems was consistently impressive.",
-  q2n:'Dr.-Ing. Jens Peth', q2r:'Supervisor, Universität Siegen · Institut für Konstruktion',
-  sAcad:'Academic Background', hAcad:'Education.',
-  ed1d:'M.Sc. Mechatronics', ed1i:'Universität Siegen — Germany', ed1t:'Oct 2021 – May 2025',
-  ed1g:'2.2 (Gut)', ed1th:'1.3 — Sehr Gut', ed1pr:'1.3 — Sehr Gut',
-  ed2d:'B.Eng. Mechanical Engineering', ed2i:'Savitribai Phule Pune University — India', ed2t:'Aug 2016 – Jul 2020',
-  ed2cl:'First Class with Distinction',
-  lOverall:'Overall Grade', lThesis:'Thesis', lProj:'Project Work', lCred:'Credits',
-  lGrade:'German Grade', lClass:'Classification',
-  ctaTxt:'Ready to bring MBSE expertise and BMW-validated performance to your team?',
-  ctaCV:'Download CV', ctaCont:'Get in touch',
-  contH:"Let's connect.", contS:'Available for systems engineering, robotics, and automation roles in Germany and the EU.',
-  contCity:'Munich, DE', contEmail:'Email me →', contLI:'LinkedIn', contGH:'GitHub', contCV:'Download CV',
-  fCopy:'© 2025 · janmesh.thakare@gmail.com'
-},
 de:{
-  navAbout:'Über mich', navProj:'Projekte', navSkills:'Fähigkeiten', navContact:'Kontakt', navCV:'Lebenslauf',
-  eyebrow:'Systemingenieur · München',
-  h1a:'Systemingenieur.', h1b:'Von BMW ausgezeichnet.',
-  sub:'M.Sc. Mechatronik mit Schwerpunkt MBSE, SysML und sicherheitskritische Systemarchitektur. Zwei BMW-Einsätze in Folge — beide mit Höchstbewertung. Sofort einsatzbereit in deutschsprachigen Teams.',
-  cta1:'Lebenslauf herunterladen', cta2:'Mehr erfahren ↓', scrTxt:'Scrollen',
-  sAbout:'Über mich', hAbout:'Ingenieur. Analytiker. Teamplayer.',
-  p1:'Ich bin M.Sc.-Absolvent Mechatronik in München, spezialisiert auf modellbasiertes Systems Engineering. Bei <strong>BMW AG</strong> war ich in zwei aufeinanderfolgenden Einsätzen tätig — zunächst als UX-Praktikant in der Vorentwicklung, dann als Masterand — und erhielt in beiden Beurteilungen Höchstbewertungen.',
-  p2:'Meine Masterarbeit <em>„Dynamic Suppression: Innovation in Suppression Technologies for Advanced Airbag Systems"</em> umfasste die Ableitung von 35 SysML-Anforderungselementen über vier Hierarchieebenen, die systemarchitektonische Modellierung (22 Blöcke, 5 Interface Blocks, 12 Ports) und ISO-15288-konforme simulationsgestützte Verifikation in MATLAB/Simulink mit Design-of-Experiments in JMP Pro.',
-  p3:'Fließend in Deutsch (C1) und Englisch (C2). Erfahren in der bereichsübergreifenden Abstimmung auf Ebene Entwicklung, Safety, Hardware und Management — ab dem ersten Tag in deutschsprachigen Teams einsatzbereit.',
-  sAch:'Leistungen', hAch:'Bewiesene Exzellenz.',
-  ac1n:'A', ac1t:'BMW-Höchstbewertung', ac1d:'Höchste Bewertungsstufe für Eigeninitiative und Teamfähigkeit — in beiden BMW-Beurteilungen (Praktikum und Masterarbeit).',
-  ac2n:'1,3', ac2t:'Masterarbeit — Sehr Gut', ac2d:'BMW AG × Universität Siegen, 2025. Erarbeiteter Ansatz wird bereits für die BMW-Produktionsimplementierung weiterverfolgt.',
-  ac3n:'35', ac3t:'SysML-Anforderungselemente', ac3d:'Über 4 Hierarchieebenen mit vollständiger ISO-15288-konformer Traceability zu Architektur, Verhalten und Verifikation.',
-  ac4n:'1,8', ac4t:'B.Eng. Deutsche Note', ac4d:'Auszeichnung „First Class with Distinction" — Savitribai Phule Pune University, 2020. Äquivalent: Gut.',
-  acCall:'BMW-Betreuer bestätigten, dass der in Janmeshs Masterarbeit erarbeitete Ansatz <strong>bereits für die Produktionsimplementierung weiterverfolgt wird</strong> — ein außergewöhnliches Ergebnis für eine Masterarbeit.',
-  sSkills:'Fachliche Stärken', hSkills:'Womit ich arbeite.',
-  sg1:'MBSE & Architektur', sg2:'Simulation & Verifikation', sg3:'CAD & Prototypen',
-  sg4:'Programmierung', sg5:'Methoden & Prozesse', sg6:'Sprachen',
-  sProj:'Ausgewählte Projekte', hProj:'Ausgewählte Arbeiten.',
-  p1t:'Dynamic Automatic Suppression System (DASS)', p1b:'BMW Masterarbeit · 2025',
-  p1o:'BMW AG — FIZ München · Sicherheitskritische Fahrzeugfunktion',
-  p1d:'Aus Stakeholder- und regulatorischen Vorgaben wurden 35 SysML-Anforderungselemente über vier Hierarchieebenen abgeleitet, eine vollständige Systemarchitektur (22 Blöcke, 5 Interface Blocks, 12 Ports) in MagicDraw/Cameo modelliert und das System in MATLAB/Simulink mittels DOE in JMP Pro validiert — durchgängige ISO-15288-Traceability.',
-  p1h:'Ansatz für BMW-Produktionsimplementierung bestätigt',
-  p2t:'Mobiles Innovationslichtgestell', p2b:'BMW UX Vorentwicklung · 2024',
-  p2o:'BMW AG — Innovationsprogramm, Vorentwicklung Nutzererlebnis',
-  p2d:'Konzeption und Bau eines strukturellen Lichtgestells für szenariobasierte Fahrzeugdemonstrationen am BMW FIZ. Vollständige Eigenverantwortung: Anforderungserfassung, CATIA-V5-Modellierung, Teilebeschaffung, mechanischer Auf- und Abbau sowie Logistik für mobile Präsentationsveranstaltungen vor Stakeholdern aus Entwicklung und Management.',
-  p3t:'Pick-and-Place-Robotersimulation', p3b:'M.Sc.-Projekt · 2023',
-  p3o:'Universität Siegen — M.Sc. Mechatronik',
-  p3d:'Modellierung eines Pick-and-Place-Roboters in MATLAB und Entwicklung von Steuerungsalgorithmen für präzise Positionierung. Simulation des Systemverhaltens und Validierung der Regelgüte durch systematischen Vergleich mit Referenzdaten — Positioniergenauigkeit und Regelrobustheit nachgewiesen.',
-  p4t:'Structural-Health-Monitoring-Vibrationssimulation', p4b:'Studienarbeit · 2024',
-  p4o:'Universität Siegen — Structural Health Monitoring',
-  p4d:'Entwicklung einer Simulationspipeline mit COMSOL Multiphysics 6.1 und MATLAB LiveLink zur Erzeugung realistischer Vibrationszeitreihen für die Entwicklung von Structural-Health-Monitoring-Algorithmen. Vergleich eines 1D-Timoshenko-Beam-Physics-Modells mit einem 3D-Solid-Mechanics-Modell, Validierung der Eigenfrequenzen, Extraktion von Zustandsraummatrizen und Anwendung der sssMOR-Modellordnungsreduktion zur Reduzierung der Rechenzeit um 60–67 %.',
-  p4h:'Vollständige Simulationspipeline zur Erzeugung von SHM-Trainingsdaten',
-  sRecs:'Referenzen', hRecs:'Was Kollegen sagen.',
+  skip:'Zum Inhalt springen',
+  navWork:'Arbeiten', navSkills:'Kompetenzen', navAI:'KI', navAbout:'Über mich', navContact:'Kontakt',
+  h1:'Ich übersetze unklare Anforderungen in Systeme, die man bauen und prüfen kann.',
+  hsub:'M.Sc. Mechatronik · Systems Engineering bei der BMW AG · eigene Webanwendungen von der Anforderung bis zum Betrieb',
+  hcta:'Zu meinen Arbeiten',
+  eyPersp:'Methode', hPersp:'Zwei Perspektiven, eine Methode',
+  pPersp:'Ob eine Rückhaltefunktion im Fahrzeug oder ein Planungswerkzeug für ein Abfertigungsteam, die Arbeit ist dieselbe. Mehrere Beteiligte wollen Unterschiedliches, und daraus muss etwas Prüfbares werden.',
+  perspAt:'Systems Engineering',
+  perspA1:'Anforderungen aus technischen und regulatorischen Quellen ableiten',
+  perspA2:'Architektur und Entscheidungslogik modellieren',
+  perspA3:'Testprozedur definieren und das Verhalten verifizieren',
+  perspA4:'Nach ISO/IEC/IEEE 15288 und 29148',
+  perspBt:'Produkt und Projekt',
+  perspB1:'Anforderungen aus Gesprächen mit Beteiligten ableiten',
+  perspB2:'Funktionsumfang festlegen und begründen',
+  perspB3:'Abnahmekriterien definieren und im Betrieb nachhalten',
+  perspB4:'Von der ersten Idee bis zum laufenden Support',
+  eyWork:'Arbeiten', hWork:'Drei Beispiele.',
+  lProblem:'Problem', lReq:'Anforderungen', lImpl:'Umsetzung', lOps:'Betrieb', lLearn:'Was ich daraus gelernt habe',
+  lTask:'Aufgabe', lReq2:'Anforderungen', lImpl2:'Umsetzung', lVerif:'Absicherung', lResult:'Ergebnis',
+  lTask2:'Aufgabe', lApproach:'Vorgehen', lImpl3:'Umsetzung', lAround:'Drumherum',
+  w1t:'Terminplanung für die Flughafenabfertigung', w1b:'Eigenprojekt · 2026',
+  w1o:'Anforderung, Umsetzung und Betrieb in eigener Verantwortung',
+  w1a:'Die Terminabstimmung zwischen Stationsleitung, Sicherheitsbereich und Abfertigungsteam lief über verstreute Kanäle. Wer wann verfügbar war, wusste niemand vollständig.',
+  w1c:'Ich habe die Beteiligten einzeln befragt, weil jede Gruppe etwas anderes brauchte. Die Leitung wollte Planbarkeit, der Sicherheitsbereich klare Freigaben, die Kolleginnen und Kollegen wollten vor allem Tempo. Daraus entstand die Planungs- und Freigabelogik.',
+  w1d:'Eine Weboberfläche, die ohne Einweisung bedienbar ist. PHP, HTML und CSS, entwickelt mit Claude Code.',
+  w1e:'Ich betreibe das Werkzeug selbst als Administrator und bin erste Anlaufstelle im Support.',
+  w1f:'Platzhalter — dieser Abschnitt wartet auf Inhalt: welche Funktion tatsächlich genutzt wurde, welche ignoriert wurde und was daraufhin geändert wurde.',
+  w1g:'Platzhalter — anonymisierter Screenshot bzw. Wireframe des Werkzeugs folgt.',
+  w2t:'Anforderungen für ein sicherheitskritisches Fahrzeugsystem', w2b:'Masterarbeit BMW AG · 2024–2025',
+  w2o:'Vorentwicklung Nutzererlebnis',
+  w2a:'Ein System sollte anhand der Sitzbelegung über die Auslösung einer Rückhaltefunktion entscheiden. Die Vorgaben kamen aus internen technischen Quellen und aus externer Regulierung.',
+  w2c:'Beide Quellen habe ich zusammengeführt und daraus 35 Anforderungselemente über vier Hierarchieebenen abgeleitet.',
+  w2d:'Systemarchitektur und Entscheidungslogik in MagicDraw modelliert, mit 22 Blocks, 5 Interface Blocks und 12 Ports.',
+  w2e:'Testprozedur definiert und die Funktion über 20 in JMP Pro erzeugte DOE-Testfälle abgesichert. Das Systemverhalten anschließend im Cameo Simulation Toolkit verifiziert.',
+  w2f:'Die Ergebnisse wurden vom Fachbereich übernommen. Bewertung 1,3.',
+  w2n:'Inhalte unterliegen einem Sperrvermerk. Details gerne im Gespräch.',
+  w3t:'Nutzererlebnis zu funktionalen Anforderungen', w3b:'BMW AG · 2024',
+  w3o:'Vorentwicklung Nutzererlebnis',
+  w3a:'Für Interieurkomponenten sollten Nutzungssituationen so beschrieben werden, dass die Fachbereiche damit weiterarbeiten können.',
+  w3c:'Nutzererlebnisse im Detail beschrieben und daraus funktionale Anforderungen abgeleitet. Darstellungsszenarien in Figma aufbereitet und mit dem Design- und dem UX-Team abgestimmt.',
+  w3d:'Prototypen in CATIA V5 und lauffähige Demos gebaut, CAD-Daten an den Prototypenbau übergeben, mit dem E/E-Fachbereich an der technischen Umsetzung gearbeitet.',
+  w3e:'Benchmark-Untersuchungen zu Einzelthemen durchgeführt und dokumentiert, interne Workshops konzipiert und moderiert, Lieferantentermine begleitet.',
+  eySkills:'Kompetenzen', hSkills:'Womit ich arbeite.',
+  kAt:'Systems Engineering',
+  kA1:'Anforderungsanalyse und Spezifikation', kA2:'SysML in MagicDraw und Cameo',
+  kA3:'Systemarchitektur und Schnittstellen', kA4:'Verifikation und Testprozeduren',
+  kA5:'ISO/IEC/IEEE 15288 und 29148', kA6:'DOE und Datenauswertung in JMP Pro',
+  kBt:'Produkt und Projekt',
+  kB1:'Anforderungserhebung bei Beteiligten', kB2:'Projektplanung und Stakeholder-Koordination',
+  kB3:'Funktionsumfang und Abnahmekriterien', kB4:'Workshop-Moderation',
+  kB5:'Präsentation vor Fachbereichen', kB6:'Betrieb und Support eigener Anwendungen',
+  kCt:'Womit ich baue',
+  repAug:'AugMix-Fork — ResNet18 und ConvNeXt_tiny ergänzt',
+  repShm:'Vibrationssimulation für Structural Health Monitoring',
+  repRob:'Pick-and-Place-Robotersimulation',
+  eyAI:'Arbeitsweise', hAI:'Wie ich mit KI arbeite',
+  ai1:'Meine Projekte entstehen mit Claude Code. Das Werkzeug übernimmt Implementierung, Refactoring und den ersten Entwurf. Was es nicht übernimmt, ist die Entscheidung, welche Funktion überhaupt gebaut werden soll und woran ich merke, dass sie funktioniert. Diese Trennung halte ich bewusst ein.',
+  ai2:'Aus meinen Machine-Learning-Projekten weiß ich außerdem, wie schnell ein Modell überzeugend aussieht und trotzdem an den Randfällen versagt.',
+  eyAbout:'Über mich', hAbout:'Kurz zu mir.',
+  ab1:'M.Sc. Mechatronik der Universität Siegen, Abschlussarbeit bei der BMW AG mit 1,3 bewertet. Bachelor in Maschinenbau mit First Class with Distinction. Zertifiziert in Product Development und Systems Engineering nach ISO/IEC/IEEE 15288 und 29148. Deutsch C1, Englisch C2, in München, umzugsbereit innerhalb Deutschlands.',
+  eyRefs:'Referenzen', hRefs:'Was Kollegen sagen.',
   q1:'Insgesamt präsentierte sich der Masterand als äußerst zuverlässige, motivierte und kompetente Nachwuchskraft, die durch ihre strukturierte, analytische und selbstständige Arbeitsweise überzeugte — stets termingerecht und über unseren Erwartungen.',
-  q1n:'Florian Ober', q1r:'Teamleiter, Vorentwicklung Sitz- & Rückhaltesysteme · BMW AG',
-  q2:'Der von Herrn Thakare erarbeitete Ansatz wird bereits für die Implementierung weiterverfolgt — ein außergewöhnliches Ergebnis für eine Masterarbeit. Seine Fähigkeit, komplexe Ingenieurprobleme verständlich darzustellen, war stets beeindruckend.',
-  q2n:'Dr.-Ing. Jens Peth', q2r:'Betreuer, Universität Siegen · Institut für Konstruktion',
-  sAcad:'Akademischer Hintergrund', hAcad:'Ausbildung.',
-  ed1d:'M.Sc. Mechatronik', ed1i:'Universität Siegen — Deutschland', ed1t:'Okt 2021 – Mai 2025',
-  ed1g:'2,2 (Gut)', ed1th:'1,3 — Sehr Gut', ed1pr:'1,3 — Sehr Gut',
-  ed2d:'B.Eng. Maschinenbau', ed2i:'Savitribai Phule Pune University — Indien', ed2t:'Aug 2016 – Jul 2020',
-  ed2cl:'Auszeichnung — First Class with Distinction',
-  lOverall:'Gesamtnote', lThesis:'Abschlussarbeit', lProj:'Projektarbeit', lCred:'Credits',
-  lGrade:'Deutsche Note', lClass:'Abschluss',
-  ctaTxt:'Bereit, MBSE-Expertise und BMW-zertifizierte Leistungsstärke in Ihr Team einzubringen?',
-  ctaCV:'Lebenslauf herunterladen', ctaCont:'Kontakt aufnehmen',
-  contH:'In Kontakt treten.', contS:'Offen für Positionen in Systems Engineering, Robotik und Automation in Deutschland und der EU.',
-  contCity:'München', contEmail:'E-Mail schreiben →', contLI:'LinkedIn', contGH:'GitHub', contCV:'Lebenslauf herunterladen',
-  fCopy:'© 2025 · janmesh.thakare@gmail.com'
+  q1r:'Teamleiter, Vorentwicklung Sitz- & Rückhaltesysteme · BMW AG',
+  q2:'Seine Fähigkeit, komplexe Ingenieurprobleme verständlich darzustellen, war stets beeindruckend.',
+  q2r:'Betreuer, Universität Siegen · Institut für Konstruktion',
+  contH:'In Kontakt treten.', contS:'München · umzugsbereit innerhalb Deutschlands',
+  contEmail:'E-Mail schreiben →',
+  fLeft:'Janmesh Thakare · M.Sc. Mechatronik · München'
+},
+en:{
+  skip:'Skip to content',
+  navWork:'Work', navSkills:'Capabilities', navAI:'AI', navAbout:'About', navContact:'Contact',
+  h1:'I turn unclear requirements into systems that can be built and verified.',
+  hsub:'M.Sc. Mechatronics · Systems Engineering at BMW AG · my own web applications from requirement to operation',
+  hcta:'See my work',
+  eyPersp:'Method', hPersp:'Two perspectives, one method',
+  pPersp:'Whether it is a restraint function in a vehicle or a planning tool for a ground handling team, the work is the same. Several people want different things, and something verifiable has to come out of it.',
+  perspAt:'Systems Engineering',
+  perspA1:'Derive requirements from technical and regulatory sources',
+  perspA2:'Model architecture and decision logic',
+  perspA3:'Define the test procedure and verify the behaviour',
+  perspA4:'To ISO/IEC/IEEE 15288 and 29148',
+  perspBt:'Product and project',
+  perspB1:'Derive requirements from conversations with the people involved',
+  perspB2:'Define the feature scope and justify it',
+  perspB3:'Define acceptance criteria and follow them through in operation',
+  perspB4:'From the first idea to ongoing support',
+  eyWork:'Work', hWork:'Three examples.',
+  lProblem:'Problem', lReq:'Requirements', lImpl:'Implementation', lOps:'Operation', lLearn:'What I learned from it',
+  lTask:'Task', lReq2:'Requirements', lImpl2:'Implementation', lVerif:'Verification', lResult:'Result',
+  lTask2:'Task', lApproach:'Approach', lImpl3:'Implementation', lAround:'Alongside',
+  w1t:'Appointment scheduling for airport ground handling', w1b:'Own project · 2026',
+  w1o:'Requirements, build and operation under my own responsibility',
+  w1a:'Scheduling between station management, the security area and the handling team ran across scattered channels. Nobody had a complete picture of who was available when.',
+  w1c:'I interviewed the people involved individually, because each group needed something different. Management wanted predictability, the security area wanted clear approvals, and colleagues above all wanted speed. The scheduling and approval logic came out of that.',
+  w1d:'A web interface that can be used without training. PHP, HTML and CSS, developed with Claude Code.',
+  w1e:'I run the tool myself as administrator and am the first point of contact for support.',
+  w1f:'Placeholder — this section is waiting for content: which feature people actually used, which they ignored, and what I changed afterwards.',
+  w1g:'Placeholder — anonymised screenshot or wireframe of the tool to follow.',
+  w2t:'Requirements for a safety-critical vehicle system', w2b:"Master's thesis, BMW AG · 2024–2025",
+  w2o:'User Experience Pre-development',
+  w2a:'A system was to decide on the deployment of a restraint function based on seat occupancy. The specifications came from internal technical sources and from external regulation.',
+  w2c:'I consolidated both sources and derived 35 requirement elements across four hierarchy levels from them.',
+  w2d:'Modelled the system architecture and decision logic in MagicDraw, with 22 blocks, 5 interface blocks and 12 ports.',
+  w2e:'Defined the test procedure and secured the function using 20 DOE test cases generated in JMP Pro. Then verified the system behaviour in the Cameo Simulation Toolkit.',
+  w2f:'The results were adopted by the department. Grade 1.3.',
+  w2n:'Contents are subject to a confidentiality restriction. Happy to discuss details in person.',
+  w3t:'User experience into functional requirements', w3b:'BMW AG · 2024',
+  w3o:'User Experience Pre-development',
+  w3a:'For interior components, usage situations were to be described so that the specialist departments could work on from them.',
+  w3c:'Described user experiences in detail and derived functional requirements from them. Prepared presentation scenarios in Figma and aligned them with the design and UX teams.',
+  w3d:'Built prototypes in CATIA V5 and working demos, handed CAD data over to the prototype build team, and worked with the E/E department on the technical implementation.',
+  w3e:'Carried out and documented benchmark studies on individual topics, designed and moderated internal workshops, and supported supplier meetings.',
+  eySkills:'Capabilities', hSkills:'What I work with.',
+  kAt:'Systems Engineering',
+  kA1:'Requirements analysis and specification', kA2:'SysML in MagicDraw and Cameo',
+  kA3:'System architecture and interfaces', kA4:'Verification and test procedures',
+  kA5:'ISO/IEC/IEEE 15288 and 29148', kA6:'DOE and data analysis in JMP Pro',
+  kBt:'Product and project',
+  kB1:'Requirements elicitation with the people involved', kB2:'Project planning and stakeholder coordination',
+  kB3:'Feature scope and acceptance criteria', kB4:'Workshop moderation',
+  kB5:'Presenting to specialist departments', kB6:'Operating and supporting my own applications',
+  kCt:'What I build with',
+  repAug:'AugMix fork — added ResNet18 and ConvNeXt_tiny',
+  repShm:'Vibration simulation for Structural Health Monitoring',
+  repRob:'Pick-and-place robot simulation',
+  eyAI:'How I work', hAI:'How I work with AI',
+  ai1:'My projects are built with Claude Code. The tool takes on implementation, refactoring and the first draft. What it does not take on is the decision about which feature should be built at all, and how I will know that it works. I keep that separation deliberately.',
+  ai2:'From my machine learning projects I also know how quickly a model can look convincing and still fail at the edge cases.',
+  eyAbout:'About', hAbout:'Briefly about me.',
+  ab1:'M.Sc. Mechatronics from Universität Siegen, thesis at BMW AG graded 1.3. Bachelor in Mechanical Engineering with First Class with Distinction. Certified in Product Development and Systems Engineering to ISO/IEC/IEEE 15288 and 29148. German C1, English C2, based in Munich, willing to relocate within Germany.',
+  eyRefs:'References', hRefs:'What colleagues say.',
+  q1:'An exceptionally reliable, motivated and competent emerging professional who delivered results with a structured, analytical and self-directed working style — always on time, always above our expectations.',
+  q1r:'Team Lead, Pre-development Seat & Restraint Systems · BMW AG',
+  q2:'His ability to clearly present complex engineering problems was consistently impressive.',
+  q2r:'Supervisor, Universität Siegen · Institut für Konstruktion',
+  contH:"Let's connect.", contS:'Munich · willing to relocate within Germany',
+  contEmail:'Email me →',
+  fLeft:'Janmesh Thakare · M.Sc. Mechatronics · Munich'
 }
 };
-
-/* Keys that need innerHTML (contain HTML tags) */
-var HK = new Set(['p1','p2','p3','acCall']);
 
 function setLang(lang){
   document.documentElement.lang = lang;
@@ -599,21 +590,21 @@ function setLang(lang){
   document.querySelectorAll('[data-key]').forEach(function(el){
     var k = el.dataset.key;
     if(c[k]==null) return;
-    if(HK.has(k)) el.innerHTML = c[k];
-    else el.textContent = c[k];
+    el.textContent = c[k];
   });
   document.querySelectorAll('.lb').forEach(function(b){
     b.classList.toggle('on', b.textContent===lang.toUpperCase());
   });
 }
 
-/* Smooth anchor scroll */
+/* Smooth anchor scroll, unless the visitor asked for reduced motion. */
+var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 document.querySelectorAll('a[href^="#"]').forEach(function(a){
   a.addEventListener('click',function(e){
     var t = document.querySelector(a.getAttribute('href'));
     if(!t) return;
     e.preventDefault();
-    window.scrollTo({top: t.getBoundingClientRect().top + window.scrollY - 64, behavior:'smooth'});
+    window.scrollTo({top: t.getBoundingClientRect().top + window.scrollY - 64, behavior: reduce ? 'auto' : 'smooth'});
   });
 });
 </script>
