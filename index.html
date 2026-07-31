@@ -55,7 +55,7 @@ a{color:inherit;text-decoration:none}
 .bs:hover{border-color:var(--tx2);color:var(--tx)}
 
 /* ── NAV ── */
-nav{position:fixed;inset:0 0 auto;height:var(--nh);z-index:200;display:flex;align-items:center;gap:24px;padding:0 clamp(20px,7vw,108px);background:oklch(100% 0 0/.95);backdrop-filter:blur(18px) saturate(1.2);border-bottom:1px solid var(--bd)}
+nav{position:fixed;inset:0 0 auto;height:var(--nh);z-index:200;display:flex;align-items:center;gap:24px;padding:0 clamp(20px,7vw,108px);background:oklch(100% 0 0/.95);-webkit-backdrop-filter:blur(18px) saturate(1.2);backdrop-filter:blur(18px) saturate(1.2);border-bottom:1px solid var(--bd)}
 .nl{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.05rem;letter-spacing:.04em;color:var(--tx);flex-shrink:0}
 .nl b{color:var(--am)}
 nav ul{display:flex;list-style:none;gap:22px;flex:1}
@@ -70,6 +70,8 @@ nav ul a:hover{color:var(--tx)}
 /* ── SHARED SECTION SCAFFOLDING ── */
 section{scroll-margin-top:var(--nh)}
 .sa{padding:32px clamp(20px,7vw,108px)}
+/* Sections that sit on the surface fill instead of the page background. */
+.on-sf{background:var(--sf)}
 .ey{display:flex;align-items:center;gap:14px;font-family:'Space Grotesk',sans-serif;font-size:.68rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--am);margin-bottom:14px}
 .ey::before{content:'';flex-shrink:0;width:32px;height:1px;background:var(--am)}
 .h2{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.9rem,3.2vw,2.8rem);font-weight:700;letter-spacing:-.022em;line-height:1.1;margin-bottom:48px}
@@ -133,11 +135,6 @@ section{scroll-margin-top:var(--nh)}
 .pd:last-child{margin-bottom:0}
 .pnote{font-size:.88rem;font-style:italic;color:var(--tx2);line-height:1.7;border-top:1px solid var(--bd);padding-top:16px;margin-top:4px}
 
-/* Unresolved content, deliberately visible rather than silently filled. */
-.todo{background:var(--el);border:1px solid var(--bd);border-left:3px solid var(--am);padding:18px 24px;display:flex;gap:14px;align-items:flex-start;margin-bottom:20px}
-.todo-ic{font-family:'Space Grotesk',sans-serif;color:var(--am);font-size:.64rem;font-weight:600;letter-spacing:.2em;flex-shrink:0;line-height:1.9}
-.todo-tx{font-size:.9rem;color:var(--tx2);line-height:1.65}
-
 /* ── PROSE ── */
 .atxt{max-width:580px}
 .atxt p{font-size:1.05rem;color:var(--tx2);line-height:1.84;margin-bottom:18px}
@@ -189,8 +186,8 @@ footer{background:oklch(88% .014 242);border-top:1px solid var(--bd);padding:24p
   </ul>
   <div class="nr">
     <div class="lsw">
-      <button class="lb"    onclick="setLang('en')">EN</button>
-      <button class="lb on" onclick="setLang('de')">DE</button>
+      <button type="button" class="lb"    onclick="setLang('en')">EN</button>
+      <button type="button" class="lb on" onclick="setLang('de')">DE</button>
     </div>
   </div>
 </nav>
@@ -213,7 +210,7 @@ footer{background:oklch(88% .014 242);border-top:1px solid var(--bd);padding:24p
 </section>
 
 <!-- ── 2 · ZWEI PERSPEKTIVEN, EINE METHODE ── -->
-<section id="perspektiven" class="sa on-sf" style="background:var(--sf)">
+<section id="perspektiven" class="sa on-sf">
   <p class="ey" data-key="eyPersp">Methode</p>
   <h2 class="h2 tight" data-key="hPersp">Zwei Perspektiven, eine Methode</h2>
   <p class="lead" data-key="pPersp">Ob eine Rückhaltefunktion im Fahrzeug oder ein Planungswerkzeug für ein Abfertigungsteam, die Arbeit ist dieselbe. Mehrere Beteiligte wollen Unterschiedliches, und daraus muss etwas Prüfbares werden.</p>
@@ -267,15 +264,6 @@ footer{background:oklch(88% .014 242);border-top:1px solid var(--bd);padding:24p
       <p class="pd" data-key="w1d">Eine Weboberfläche, die ohne Einweisung bedienbar ist. PHP, HTML und CSS, entwickelt mit Claude Code.</p>
       <p class="pl" data-key="lOps">Betrieb</p>
       <p class="pd" data-key="w1e">Ich betreibe das Werkzeug selbst als Administrator und bin erste Anlaufstelle im Support.</p>
-      <p class="pl" data-key="lLearn">Was ich daraus gelernt habe</p>
-      <div class="todo">
-        <span class="todo-ic">TODO</span>
-        <span class="todo-tx" data-key="w1f">Platzhalter — dieser Abschnitt wartet auf Inhalt: welche Funktion tatsächlich genutzt wurde, welche ignoriert wurde und was daraufhin geändert wurde.</span>
-      </div>
-      <div class="todo">
-        <span class="todo-ic">TODO</span>
-        <span class="todo-tx" data-key="w1g">Platzhalter — anonymisierter Screenshot bzw. Wireframe des Werkzeugs folgt.</span>
-      </div>
     </article>
 
     <!-- Card 2 · 2024–2025 -->
@@ -321,7 +309,7 @@ footer{background:oklch(88% .014 242);border-top:1px solid var(--bd);padding:24p
 </section>
 
 <!-- ── 4 · KOMPETENZEN ── -->
-<section id="kompetenzen" class="sa on-sf" style="background:var(--sf)">
+<section id="kompetenzen" class="sa on-sf">
   <p class="ey" data-key="eySkills">Kompetenzen</p>
   <h2 class="h2" data-key="hSkills">Womit ich arbeite.</h2>
   <!-- Two equal columns, six items each, then one shared full-width row. -->
@@ -381,7 +369,7 @@ footer{background:oklch(88% .014 242);border-top:1px solid var(--bd);padding:24p
 </section>
 
 <!-- ── 6 · ÜBER MICH ── -->
-<section id="ueber" class="sa" style="background:var(--sf)">
+<section id="ueber" class="sa on-sf">
   <p class="ey" data-key="eyAbout">Über mich</p>
   <h2 class="h2" data-key="hAbout">Kurz zu mir.</h2>
   <div class="atxt">
@@ -457,7 +445,7 @@ de:{
   perspB3:'Abnahmekriterien definieren und im Betrieb nachhalten',
   perspB4:'Von der ersten Idee bis zum laufenden Support',
   eyWork:'Arbeiten', hWork:'Drei Beispiele.',
-  lProblem:'Problem', lReq:'Anforderungen', lImpl:'Umsetzung', lOps:'Betrieb', lLearn:'Was ich daraus gelernt habe',
+  lProblem:'Problem', lReq:'Anforderungen', lImpl:'Umsetzung', lOps:'Betrieb',
   lTask:'Aufgabe', lReq2:'Anforderungen', lImpl2:'Umsetzung', lVerif:'Absicherung', lResult:'Ergebnis',
   lTask2:'Aufgabe', lApproach:'Vorgehen', lImpl3:'Umsetzung', lAround:'Drumherum',
   w1t:'Terminplanung für die Flughafenabfertigung', w1b:'Eigenprojekt · 2026',
@@ -466,8 +454,6 @@ de:{
   w1c:'Ich habe die Beteiligten einzeln befragt, weil jede Gruppe etwas anderes brauchte. Die Leitung wollte Planbarkeit, der Sicherheitsbereich klare Freigaben, die Kolleginnen und Kollegen wollten vor allem Tempo. Daraus entstand die Planungs- und Freigabelogik.',
   w1d:'Eine Weboberfläche, die ohne Einweisung bedienbar ist. PHP, HTML und CSS, entwickelt mit Claude Code.',
   w1e:'Ich betreibe das Werkzeug selbst als Administrator und bin erste Anlaufstelle im Support.',
-  w1f:'Platzhalter — dieser Abschnitt wartet auf Inhalt: welche Funktion tatsächlich genutzt wurde, welche ignoriert wurde und was daraufhin geändert wurde.',
-  w1g:'Platzhalter — anonymisierter Screenshot bzw. Wireframe des Werkzeugs folgt.',
   w2t:'Anforderungen für ein sicherheitskritisches Fahrzeugsystem', w2b:'Masterarbeit BMW AG · 2024–2025',
   w2o:'Vorentwicklung Nutzererlebnis',
   w2a:'Ein System sollte anhand der Sitzbelegung über die Auslösung einer Rückhaltefunktion entscheiden. Die Vorgaben kamen aus internen technischen Quellen und aus externer Regulierung.',
@@ -528,7 +514,7 @@ en:{
   perspB3:'Define acceptance criteria and follow them through in operation',
   perspB4:'From the first idea to ongoing support',
   eyWork:'Work', hWork:'Three examples.',
-  lProblem:'Problem', lReq:'Requirements', lImpl:'Implementation', lOps:'Operation', lLearn:'What I learned from it',
+  lProblem:'Problem', lReq:'Requirements', lImpl:'Implementation', lOps:'Operation',
   lTask:'Task', lReq2:'Requirements', lImpl2:'Implementation', lVerif:'Verification', lResult:'Result',
   lTask2:'Task', lApproach:'Approach', lImpl3:'Implementation', lAround:'Alongside',
   w1t:'Appointment scheduling for airport ground handling', w1b:'Own project · 2026',
@@ -537,8 +523,6 @@ en:{
   w1c:'I interviewed the people involved individually, because each group needed something different. Management wanted predictability, the security area wanted clear approvals, and colleagues above all wanted speed. The scheduling and approval logic came out of that.',
   w1d:'A web interface that can be used without training. PHP, HTML and CSS, developed with Claude Code.',
   w1e:'I run the tool myself as administrator and am the first point of contact for support.',
-  w1f:'Placeholder — this section is waiting for content: which feature people actually used, which they ignored, and what I changed afterwards.',
-  w1g:'Placeholder — anonymised screenshot or wireframe of the tool to follow.',
   w2t:'Requirements for a safety-critical vehicle system', w2b:"Master's thesis, BMW AG · 2024–2025",
   w2o:'User Experience Pre-development',
   w2a:'A system was to decide on the deployment of a restraint function based on seat occupancy. The specifications came from internal technical sources and from external regulation.',
